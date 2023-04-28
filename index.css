@@ -66,7 +66,7 @@ nav ul a:hover{
     display: none;
 }
 @media screen and (max-width:768px) {
-    nav {
+    header nav {
         position: fixed;
         top: 80px;
         left: -120%;
@@ -411,7 +411,21 @@ header .home{
 
 @media screen and (max-width:768px) {
   .platform-visible-steps h2{
-    font-size: 3vw;
+    font-size: 4vw;
+    max-width: 40%;
+  }
+  .steps-card-wrapper {
+    flex-wrap: wrap;
+
+  }
+  .steps-card-wrapper .card{
+    width: 70%;
+    align-items: center;
+   
+  }
+  .steps-card-wrapper .card .circle{
+    width: 50px;
+    height: 50px;
   }
 }
 .eff-and-prof-sec {
@@ -476,7 +490,7 @@ header .home{
   gap: 40px;
 }
 .ben-working-cont .card-wrapper .img-card {
-  max-width: 25%;
+  width: 25%;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -493,7 +507,29 @@ header .home{
   margin: 20px 0px;
   text-align: center;
 }
-
+@media screen and (max-width:768px) {
+  .ben-working-cont .card-wrapper{
+    width: 80vw;
+    margin: auto auto ;
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    
+  }
+  .ben-working-cont .card-wrapper .img-card{
+    width:100%;
+    height: 100%;
+  }
+  .ben-working-cont .card-wrapper .img-card span{
+    
+    font-size: 4vw;
+    }
+    .ben-working-cont .card-wrapper .img-card img{
+      width: 100%;
+      height: 100%;
+    }
+}
 .investor-sec {
   width: 100vw;
   text-align: center;
@@ -537,6 +573,24 @@ header .home{
   .investor-img-wrapper .card {
     flex-direction: column;
   }
+}
+@media screen and (max-width:645px) {
+   .investor-img-wrapper{
+    width: 100vw;
+    margin: auto auto ;
+    display: grid;
+    grid-template-columns:50vw 50vw;
+    grid-template-rows: 40vh 40vh ;
+    gap: 0;
+ 
+  }
+  .investor-img-wrapper .card{
+  min-width:100%;
+
+  }
+  .investor-img-wrapper .card span{
+    font-size: 3vw;
+   }
 }
 .mentor-and-news-sec {
   width: 100vw;
@@ -660,11 +714,11 @@ header .home{
     padding: 10vh 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .left-part{
-  max-width: 50%;
+  max-width: 60%;
   display: flex;
   flex-direction: column;
   gap: 10vh;
@@ -680,22 +734,41 @@ header .home{
  .address-support .address{
     min-width: 100%;
     display: flex;
+    border-bottom: 5px solid grey;
+    padding-bottom: 8vh;
 
+}
+.add-1,.add-2,.add-3{
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.add-3 p{
+  margin-top: -13px;
+}
+.add-1 p,.add-2 p,.add-3 p{
+  max-width: 60%;
 }
 
 .address-support .support{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   gap: 20px;
 }
  .address-support .h-s-icon{
+  /* max-width: 50%; */
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
+    flex-direction: column;
     gap: 5px;
-    margin: 10px 0px;
- }
+    margin-top: 5px;
 
+ }
+ .address-support .h-s-icon img{
+  width: 4vw;
+ }
  .nav-and-privacy{
     width: 100%;
  }
@@ -724,8 +797,9 @@ header .home{
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    width: 50%;
-    padding: 20px;
+    max-width: 40%;
+    height: 100%;
+    padding-left: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -781,11 +855,11 @@ form  button{
 .right-part .social-link{
     display: flex;
     justify-content: flex-start;
- 
+    
     align-items: center;
     width:100%;
     gap: 10px;
-    margin: auto auto;
+    margin: 20px auto;
 }
 .play-store-icon{
     display: flex;
@@ -793,17 +867,21 @@ form  button{
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-    padding: 10px;
+ 
+    padding: 5px;
     border-radius: 10px;
+    min-width:15vw;
+
 
 }
 .get-it-on-google span{
+  font-size: 1vw;
     color: grey;
     margin-left: 10px;
 }
 .get-it-on-google p{
+    font-size: 1.5vw;
     word-spacing: 10px;
-    margin-top: 10px;
    margin-left: 10px;
 }
 
@@ -816,3 +894,50 @@ form  button{
 }
 
 
+@media screen and (max-width:1100px) {
+  .footer-main-div{
+    flex-direction: column-reverse;
+  }
+  .footer-main-div .left-part{
+    min-width: 100%;
+  }
+  .footer-main-div .left-part .address-support .address div{
+    font-size: 2.2vw;
+
+  }
+  .footer-main-div .left-part .support{
+    width: 100%;
+
+  }
+   .footer-main-div .left-part .support >div{
+    min-width: 30%;
+ 
+   }
+      .footer-main-div .left-part .support >div span{
+        font-size: 2.5vw;
+      }
+      .footer-main-div .left-part .support >div .h-s-icon span{
+        
+        font-size: 2.4vw;
+      }
+      .nav-and-privacy nav a{
+       font-size: 3vw;
+      }
+  .footer-main-div .right-part .social-link{
+    min-width: 100%;
+    justify-content: center;
+  }
+  .footer-main-div .right-part {
+    min-width: 100%;
+  }
+  .footer-main-div .right-part .copy-right{
+    display: none;
+  }
+  .footer-main-div .right-part  .play-store-icon{
+    align-items: center;
+    margin-top: 0px;
+    padding: 5px;
+
+  }
+
+}
